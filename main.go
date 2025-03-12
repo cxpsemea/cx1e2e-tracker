@@ -24,7 +24,7 @@ func main() {
 	logger.SetOutput(os.Stdout)
 	logger.Info("This tool conducts simple analysis of a Cx1e2e JSON report and generates a cx1e2e-history.json datafile. The cx1e2e-history.json file is also used as input to identify deviations in test duration.")
 
-	ReportFile := flag.String("report", "cx1e2e-result.json", "Cx1e2e JSON report file")
+	ReportFile := flag.String("report", "cx1e2e_result.json", "Cx1e2e JSON report file")
 	HistoryFile := flag.String("history", "cx1e2e-history.json", "Cx1e2e-tracker history file")
 	MaxPercent := flag.Uint("max-pcf", 15, "Output a warning when test duration exceeds historical maximum by this percentage")
 	AvgPercent := flag.Uint("avg-pcf", 15, "Output a warning when test duration exceeds historical average by this percentage")
