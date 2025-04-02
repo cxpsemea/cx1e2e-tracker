@@ -10,6 +10,7 @@ type ReportTestDetails struct {
 	Test     string
 	Duration float64
 	Result   string
+	ID       uint64
 }
 
 type Report struct {
@@ -24,4 +25,11 @@ type HistoryMetric struct {
 
 type History struct {
 	Pass map[string]HistoryMetric
+}
+
+type comparisonEntry struct {
+	TestName             string
+	Result1, Result2     string
+	Duration1, Duration2 float64
+	ID                   uint64
 }
